@@ -1,0 +1,32 @@
+/* Add this to your existing style.css file */
+
+.nav-link.active {
+    color: #3498db;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Notification styles */
+.notification {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-left: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Scroll to top button hover effect */
+.scroll-to-top:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* Enhanced project card transitions */
+.project-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loading spinner enhancement */
+.loader-content p {
+    font-weight: 500;
+    color: #7f8c8d;
+}
