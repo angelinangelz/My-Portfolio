@@ -93,9 +93,12 @@
     }
 
  .about-image img {
-        width: 400px;
-        height: 470px;
-        margin-bottom: 2rem;
+        width: 80%;
+        margin: auto;
+        display: block;
+    }
+    section{
+        padding: 20px;
     }
 
 
