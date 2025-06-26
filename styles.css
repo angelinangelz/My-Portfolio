@@ -144,7 +144,7 @@ gap: 4rem;
 
 .hero-text h1{
     color:linear-gradient(45deg, #ff6b6b, #4ecdc4) ;
- font-size: 3rem;
+ font-size: 42px;
  font-weight: 700;
  margin-bottom: 1rem;
  line-height: 1.2;
@@ -582,21 +582,7 @@ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     font-size: 0.95rem;
 }
 
-/* Timeline dots */
-.education-item::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 15px;
-    height: 15px;
-    background: #3498db;
-    border: 3px solid white;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-}
+
 
 
 
@@ -795,6 +781,20 @@ box-shadow: 0 2px 8px rgba(0,0,0,0.05);
  padding: 2rem;
  border-radius: 15px;
  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.contact-form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #e74c3c;
+}
+
+.form-group input:valid,
+.form-group textarea:valid {
+    border-color: #27ae60;
 }
 
 

@@ -131,22 +131,27 @@ fadeElements.forEach(element => {
     fadeObserver.observe(element);
 });
 
-// Contact form handling
+// Contact form handling 
 const contactForm = document.querySelector('.contact-form form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const subject = this.querySelector('input[type="text"]:nth-of-type(2)').value;
-        const message = this.querySelector('textarea').value;
+        const name = this.querySelector('input[name="name"]').value.trim();
+        const email = this.querySelector('input[name="email"]').value.trim();
+        const subject = this.querySelector('input[name="subject"]').value.trim();
+        const message = this.querySelector('textarea[name="message"]').value.trim();
         
         // Simple validation
         if (!name || !email || !subject || !message) {
             showNotification('Please fill in all fields', 'error');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showNotification('Please enter a valid email address', 'error');
             return;
         }
         
